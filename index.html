@@ -1,0 +1,35 @@
+<!Doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ev3Cam</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <ul id="pictures"></ul>
+  </body>
+</html>
+<script>
+  var imgFileName=io.connect('http://ev3dev.local:1337/imgFileName');
+  imgFileName.on('message',function(fileName){
+    console.log(fileName);
+    var img = document.createElement('img');
+    img.src = "./images/" + fileName ;
+    document.getElementById('pictures').prepend(img)
+  });
+</script>
+<style>
+  h1{
+    text-align:center;
+  }
+  img{
+    width : 500px;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p{
+   text-align:center;
+  }
+</style>

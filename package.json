@@ -1,0 +1,22 @@
+{
+  "name": "ev3Cam",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muro-tani/ev3Cam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muro-tani/ev3Cam/issues"
+  },
+  "dependencies": {
+    "ev3dev-lang": "^1.0.0",
+    "socket.io": "^1.7.2"
+  }
+}
